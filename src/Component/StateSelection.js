@@ -13,6 +13,17 @@ export default function StateSelection() {
         try{
     let response=await fetch(url)
     let data=await response.json()
+    // let s=new Set()
+    // for(let ele of data)
+    // {
+    //     let e=ele.toLowerCase();
+    //     e=e.charAt(0).toUpperCase() + e.slice(1);
+    //     s.add(e)
+    // }
+      //s.add(ele.toCa)  
+    //}
+    //let s=new Set(data);
+    //data=[...s]
     //console.log(data);
     //setData(data);
     fn(data)
@@ -45,7 +56,8 @@ export default function StateSelection() {
    {
     if(country && state && city)
     {
-        return <p style={{marginTop:"2.5rem",fontWeight:"bold"}}>You Selected <span style={{fontSize:"1.5rem"}}>{city} </span>, <span style={{fontWeight:"bold",color:"gray",fontSize:"1.2rem"}}>{state}, {country}</span></p>
+        
+        return <p style={{marginTop:"2.5rem",fontWeight:"bold"}}> You selected <span style={{fontSize:"1.5rem"}}>{city}</span>, <span style={{fontWeight:"bold",color:"gray",fontSize:"1.2rem"}}>{state}, {country}</span></p>
     }
    }
     return (
